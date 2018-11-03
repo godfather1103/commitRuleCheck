@@ -2,7 +2,7 @@ package ga.rugal.maven.plugin;
 
 import ga.rugal.maven.plugin.rule.CaseRule;
 import ga.rugal.maven.plugin.rule.LengthRule;
-import com.chuchuanbao.error.FailureException;
+import com.godfather1103.error.FailureException;
 import lombok.AllArgsConstructor;
 
 import java.util.regex.Matcher;

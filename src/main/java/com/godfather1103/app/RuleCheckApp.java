@@ -1,9 +1,9 @@
-package com.chuchuanbao.App;
+package com.godfather1103.app;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import ga.rugal.maven.plugin.RuleChecker;
-import com.chuchuanbao.error.FailureException;
+import com.godfather1103.error.FailureException;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
