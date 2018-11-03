@@ -36,7 +36,7 @@ public class RuleChecker {
      * Check a matched string with given rules.
      *
      * @param match The input string
-     * @return How many failed checks in this string
+     * @throws FailureException 检测的异常结果
      */
     public void check(String match) throws FailureException {
         Pattern pattern = Pattern.compile(this.matchPattern);
@@ -65,7 +65,7 @@ public class RuleChecker {
     }
 
     private String extractContent(String capturedString) throws FailureException {
-        if (capturedString==null){
+        if (capturedString == null) {
             return "";
         }
         Pattern pattern = Pattern.compile(this.pattern);
