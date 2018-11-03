@@ -13,11 +13,40 @@
     <!-- FIXME change it to the project's website -->
     <url>https://github.com/godfather1103/commitRuleCheck</url>
 
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
+    <licenses>
+        <license>
+            <name>The MIT License (MIT)</name>
+            <url>https://mit-license.org/</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <tag>master</tag>
+        <url>https://github.com/godfather1103/commitRuleCheck</url>
+        <connection>scm:git:git@github.com:godfather1103/commitRuleCheck.git</connection>
+        <developerConnection>scm:git:git@github.com:godfather1103/commitRuleCheck.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>Jack Chu</name>
+            <email>chuchuanbao@gmail.com</email>
+            <organization>Jack Chu</organization>
+        </developer>
+    </developers>
 
     <dependencies>
         <dependency>
