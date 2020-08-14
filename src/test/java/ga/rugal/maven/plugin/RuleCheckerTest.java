@@ -21,7 +21,7 @@ public class RuleCheckerTest {
             Type type = new TypeToken<ArrayList<RuleChecker>>(){}.getType();
             ArrayList<RuleChecker> ruleCheckers = new Gson().fromJson(s,type);
             for (RuleChecker ruleChecker:ruleCheckers){
-                ruleChecker.check("chore(): 做了些修改");
+                ruleChecker.check("chore(修改): 做了些修改");
             }
         }catch (Exception ex){
             ex.printStackTrace();
@@ -31,7 +31,17 @@ public class RuleCheckerTest {
     @Test
     public void testApp(){
         try {
-            new RuleCheckApp().check("做了些修改");
+            new RuleCheckApp().check("fix(修改): 做了些修改");
+        } catch (FailureException e) {
+            e.printStackTrace();
+        }
+        try {
+            new RuleCheckApp().check("fi(): 做了些修改");
+        } catch (FailureException e) {
+            e.printStackTrace();
+        }
+        try {
+            new RuleCheckApp().check("fix: 做了些修改");
         } catch (FailureException e) {
             e.printStackTrace();
         }

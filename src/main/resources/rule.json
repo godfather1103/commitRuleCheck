@@ -1,10 +1,22 @@
 [
   {
-    "matchPattern": "^((feat)|(fix)|(docs)|(style)|(refactor)|(perf)|(test)|(build)|(ci)|(chore)|(revert)){1}((\\()\\S*(\\)))?:(\\s)+(.*)",
-    "showMsg": "未包含feat,fix,docs,style,refactor,perf,test,build,ci,chore,revert等关键词",
-    "captureGroups": [{
-      "caseFormat": "LOWERCASE",
-      "min":3
-    }]
+    "matchPattern": "^((feat)|(fix)|(docs)|(style)|(refactor)|(perf)|(test)|(build)|(ci)|(chore)|(revert)).+",
+    "showMsg": "commit的内容中未包含feat,fix,docs,style,refactor,perf,test,build,ci,chore,revert等关键词",
+    "captureGroups": [
+      {
+        "caseFormat": "LOWERCASE",
+        "min": 3
+      }
+    ]
+  },
+  {
+    "matchPattern": "^((feat)|(fix)|(docs)|(style)|(refactor)|(perf)|(test)|(build)|(ci)|(chore)|(revert))(\\(+.+\\)+):\\s.+",
+    "showMsg": "commit的内容不符合格式\n<type>(<scope>): <subject>\n<BLANK LINE>\n<body><optional>\n<BLANK LINE>\n<footer><optional>",
+    "captureGroups": [
+      {
+        "caseFormat": "LOWERCASE",
+        "min": 3
+      }
+    ]
   }
 ]
